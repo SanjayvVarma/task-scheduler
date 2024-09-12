@@ -1,12 +1,13 @@
-import { useState } from 'react'
+
 import './App.css'
+import TaskScheduler from './taskScheduler/TaskScheduler'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
       <h1>welcome to task scheduler</h1>
+      <TaskScheduler/>
     </div>
   )
 }

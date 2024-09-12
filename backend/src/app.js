@@ -15,7 +15,10 @@ app.use(express.json())
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true, limit: "20kb" }));
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://task-scheduler-eosin.vercel.app',
+    credentials: true
+}))
 
 cron.schedule('* * * *  *', async () => {
     console.log('Running scheduled tasks every minute');

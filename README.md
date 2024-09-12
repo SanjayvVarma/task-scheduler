@@ -24,7 +24,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/task-scheduler.git
+    git clone https://github.com/SanjayvVarma/task-scheduler.git
     cd task-scheduler
     ```
 
@@ -101,7 +101,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 
 ### Repository
 
-[GitHub Repository](https://github.com/your-username/task-scheduler)
+[GitHub Repository](https://github.com/SanjayvVarma/task-scheduler)
 
 ### License
 

@@ -31,6 +31,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 2. **Install dependencies:**
 
     ```bash
+    cd backend
     npm install
     ```
 
@@ -46,7 +47,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 4. **Start the server:**
 
     ```bash
-    node index.js
+    npm run dev
     ```
 
 ### Frontend Setup
@@ -54,7 +55,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 1. **Navigate to the frontend directory:**
 
     ```bash
-    cd task-scheduler-frontend
+    cd frontend
     ```
 
 2. **Install dependencies:**
@@ -66,7 +67,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 3. **Start the React app:**
 
     ```bash
-    npm start
+    npm run dev
     ```
 
 ### Usage
@@ -81,23 +82,25 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 
 3. **Viewing Task Logs:**
 
-    Logs of task executions are available through the API at `/api/tasks/:taskId/logs`. The frontend will display these logs in the task details view.
+    Logs of task executions are available through the API at `/api/v1/log/logs/tasks/:taskId`. The frontend will display these logs in the task details view.
 
 ### API Documentation
 
-- **POST /api/tasks**: Create a new task.
+ [base_url](https://task-scheduler-k1qv.onrender.com)
+
+- **POST api/v1/task/create-tasks**: Create a new task.
   - Request body: `{ name: string, schedule: string, disabled: boolean }`
   - Response: Created task object.
 
-- **GET /api/tasks**: Retrieve all tasks.
+- **GET /api/v1/task/get-tasks**: Retrieve all tasks.
   - Response: Array of task objects.
 
-- **GET /api/tasks/:taskId/logs**: Retrieve logs for a specific task.
+- **GET /api/v1/log/logs/tasks/:taskId**: Retrieve logs for a specific task.
   - Response: Array of log objects.
 
 ### Live Link
 
-[Link to live site](https://your-live-link.com)
+[Link to live site](https://task-scheduler-k1qv.onrender.com)
 
 ### Repository
 

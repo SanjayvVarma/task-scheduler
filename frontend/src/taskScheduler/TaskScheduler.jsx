@@ -7,6 +7,8 @@ const TaskScheduler = () => {
 
   const fetchTasks = async () => {
     const response = await axios.get('https://task-scheduler-k1qv.onrender.com/api/v1/task/get-tasks');
+    console.log(response);
+    
     setTasks(response.data);
   };
 

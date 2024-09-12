@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AddTaskForm = () => {
   const [name, setName] = useState('');
   const [recipientEmail, setRecipientEmail] = useState('');
   const [schedule, setSchedule] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,6 +16,7 @@ const AddTaskForm = () => {
       setRecipientEmail('');
       setSchedule('');
       alert('Task created successfully!');
+      navigate('/tasks');
     } catch (error) {
       console.error('Error creating task:', error);
       alert('Failed to create task.');

@@ -7,7 +7,7 @@ const TaskLogs = () => {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const response = await axios.get('/api/v1/log/all-logs');
+        const response = await axios.get('https://task-scheduler-k1qv.onrender.com/api/v1/log/all-logs');
         setLogs(response.data);
       } catch (error) {
         console.error('Error fetching logs:', error);

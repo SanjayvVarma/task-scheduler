@@ -82,7 +82,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 
 3. **Viewing Task Logs:**
 
-    Logs of task executions are available through the API at `/api/v1/log/logs/tasks/:taskId`. The frontend will display these logs in the task details view.
+    Logs of task executions are available through the API at `/api/v1/log/all-logs`. The frontend will display these logs in the task details view.
 
 ### API Documentation
 
@@ -95,7 +95,7 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 - **GET /api/v1/task/get-tasks**: Retrieve all tasks.
   - Response: Array of task objects.
 
-- **GET /api/v1/log/logs/tasks/:taskId**: Retrieve logs for a specific task.
+- **GET /api/v1/log/all-logs**: Retrieve logs for a specific task.
   - Response: Array of log objects.
 
 ### Live Link

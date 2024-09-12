@@ -18,7 +18,7 @@ const TaskList = () => {
   }, []);
 
   return (
-    <div className="p-4 max-w-md mx-auto">
+    <div className="p-4 max-w-3xl mx-auto">
       <h2 className="text-xl font-bold mb-4">Task List</h2>
       <ul className="space-y-4">
         {tasks.map(task => (

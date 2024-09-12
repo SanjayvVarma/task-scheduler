@@ -1,5 +1,5 @@
-import cors from 'cors';
-import cron from 'node-cron'
+// import cors from 'cors';
+import cron from 'node-cron';
 import express from "express";
 import { config } from "dotenv";
 import taskRouter from './routes/task.routes.js'
@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true, limit: "20kb" }));
 
-app.use(cors())
+// app.use(cors())
 
 cron.schedule('* * * *  *', async () => {
     console.log('Running scheduled tasks every minute');

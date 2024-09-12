@@ -15,10 +15,7 @@ app.use(express.json())
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true, limit: "20kb" }));
 
-app.use(cors({
-    origin: '*',
-    credentials: true
-}))
+app.use(cors())
 
 cron.schedule('* * * *  *', async () => {
     console.log('Running scheduled tasks every minute');

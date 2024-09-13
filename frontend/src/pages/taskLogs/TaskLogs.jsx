@@ -51,7 +51,7 @@ const TaskLogs = () => {
         const response = await axios.get('https://task-scheduler-k1qv.onrender.com/api/v1/log/all-logs');
         const logsData = response.data;
         console.log('Fetched logs:', logsData);
-        setLogs(logsData);
+        setLogs(Array.isArray(logsData));
       } catch (error) {
         console.error('Error fetching logs:', error);
       }
@@ -69,8 +69,7 @@ const TaskLogs = () => {
         ) : (
           logs.map(log => (
             <li key={log._id} className="border p-4 rounded-md shadow-sm">
-              <p><strong>Task ID:</strong> {log.taskId || 'N/A'}</p>
-              <p><strong>Execution Time:</strong> {log.executionTime ? new Date(log.executionTime).toLocaleString() : 'N/A'}</p>
+              <p><strong>Execution Time:</strong> {log.executionTime? new Date(log.executionTime).toLocaleString() : 'N/A'}</p>
               <p><strong>Status:</strong> {log.status || 'N/A'}</p>
               <p><strong>Message:</strong> {log.message || 'N/A'}</p>
             </li>

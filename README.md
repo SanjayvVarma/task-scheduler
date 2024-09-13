@@ -11,6 +11,13 @@ The Task Scheduler is a full-stack application that allows you to manage and sch
 - **Task Logs**: Track the history of task executions, including success and failure logs.
 - **CRUD Operations**: Perform create, read operations on tasks and logs.
 
+![Local Image](./backend/public/ss/add-Task.png)
+![Local Image](./backend/public/ss/all-task.png)
+![Local Image](./backend/public/ss/all-logs.png)
+![Local Image](./backend/public/ss/send%20task%20email.png)
+![Local Image](./backend/public/ss/recieved%20eamil1.jpeg.png)
+![Local Image](./backend/public/ss/recieved%20eamil.jpeg)
+
 ## Setup Instructions
 
 ### Prerequisites

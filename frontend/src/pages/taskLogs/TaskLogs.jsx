@@ -22,13 +22,13 @@ const TaskLogs = () => {
   return (
     <div className="p-4 max-w-md mx-auto">
       <h2 className="text-xl font-bold mb-4">Task Logs</h2>
+      <h2 className="text-xl font-bold mb-4">count : {logs.length }</h2>
       <ul className="space-y-4">
         {logs.length === 0 ? (
           <p>No logs available</p>
         ) : (
           logs.map(log => (
             <li key={log._id} className="border p-4 rounded-md shadow-sm">
-              <p>count : {logs.length }</p>
               <p><strong>Execution Time:</strong> {log.executionTime? new Date(log.executionTime).toLocaleString() : 'N/A'}</p>
               <p><strong>Status:</strong> {log.status || 'N/A'}</p>
               <p><strong>Message:</strong> {log.message || 'N/A'}</p>

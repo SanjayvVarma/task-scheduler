@@ -9,6 +9,8 @@ const TaskLogs = () => {
       try {
         const response = await axios.get('https://task-scheduler-k1qv.onrender.com/api/v1/log/all-logs');
         setLogs(response.data);
+        console.log(response);
+        
       } catch (error) {
         console.error('Error fetching logs:', error);
       }

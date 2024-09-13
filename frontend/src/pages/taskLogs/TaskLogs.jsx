@@ -49,8 +49,8 @@ const TaskLogs = () => {
     const fetchLogs = async () => {
       try {
         const response = await axios.get('https://task-scheduler-k1qv.onrender.com/api/v1/log/all-logs');
-        const logsData = Array.isArray(response.data.data) ? response.data.data : [];
-        console.log('Fetched logs:', logsData); // Log to check the format
+        const logsData = response.data.data;
+        console.log('Fetched logs:', logsData);
         setLogs(logsData);
       } catch (error) {
         console.error('Error fetching logs:', error);

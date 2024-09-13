@@ -9,6 +9,8 @@ const TaskList = () => {
       try {
         const response = await axios.get('https://task-scheduler-k1qv.onrender.com/api/v1/task/get-tasks');
         setTasks(response.data);
+        console.log(response);
+        
       } catch (error) {
         console.error('Error fetching tasks:', error);
       }

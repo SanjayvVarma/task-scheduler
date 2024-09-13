@@ -28,6 +28,7 @@ const TaskLogs = () => {
         ) : (
           logs.map(log => (
             <li key={log._id} className="border p-4 rounded-md shadow-sm">
+              <p>count : {logs.length }</p>
               <p><strong>Execution Time:</strong> {log.executionTime? new Date(log.executionTime).toLocaleString() : 'N/A'}</p>
               <p><strong>Status:</strong> {log.status || 'N/A'}</p>
               <p><strong>Message:</strong> {log.message || 'N/A'}</p>
